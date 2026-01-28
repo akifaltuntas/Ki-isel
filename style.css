@@ -43,3 +43,35 @@ h1 {
   transform: scale(1.05);
   opacity: 0.85;
 }
+.about {
+  margin-top: 80px;
+  text-align: left;
+}
+
+.about p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #cbd5e1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.moving-text {
+  margin-top: 30px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #94a3b8;
+  font-style: italic;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: slideText 12s linear infinite;
+}
+
+@keyframes slideText {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
