@@ -29,3 +29,17 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.hero-link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.hero-link h1 {
+  cursor: pointer;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.hero-link h1:hover {
+  transform: scale(1.05);
+  opacity: 0.85;
+}
