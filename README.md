@@ -1,1 +1,1 @@
-# Ki-isel
+#kişisel
