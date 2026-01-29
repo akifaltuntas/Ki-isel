@@ -1,33 +1,13 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
+  background: #0b0f1a;
+  color: #fff;
   font-family: Arial, sans-serif;
-  background: radial-gradient(circle at 20% 20%, #1a1f35, #0b0f1a 60%);
-  color: #e5e7eb;
-  overflow-x: hidden;
-}
-
-/* ARKA PLAN IŞIK */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: linear-gradient(
-    120deg,
-    transparent 30%,
-    rgba(245,197,66,0.08),
-    transparent 70%
-  );
-  animation: lightMove 12s linear infinite;
-  pointer-events: none;
-}
-
-@keyframes lightMove {
-  from { transform: translateX(-40%); }
-  to   { transform: translateX(40%); }
 }
 
 /* NAVBAR */
@@ -37,21 +17,27 @@ body::before {
   padding: 20px 40px;
 }
 
-.navbar a {
-  color: #e5e7eb;
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #f5c542;
+}
+
+nav a {
+  color: #cbd5f5;
+  margin-left: 20px;
   text-decoration: none;
 }
 
-.logo {
+nav a:hover {
   color: #f5c542;
-  font-weight: bold;
 }
 
 /* HERO */
 .hero {
   text-align: center;
   margin-top: 120px;
-  animation: fadeUp 1.2s ease forwards;
+  animation: fadeIn 1.5s ease;
 }
 
 .hero h1 span {
@@ -62,13 +48,12 @@ body::before {
   margin-top: 30px;
 }
 
-/* BUTTONS */
 .btn {
   padding: 12px 24px;
-  border-radius: 8px;
-  text-decoration: none;
   margin: 10px;
-  transition: all 0.3s ease;
+  text-decoration: none;
+  border-radius: 8px;
+  display: inline-block;
 }
 
 .primary {
@@ -81,93 +66,63 @@ body::before {
   color: #f5c542;
 }
 
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(245,197,66,0.25);
-}
-
-/* PAGE */
-.page {
-  padding: 60px;
-}
-
-.fade {
-  animation: fadeUp 1s ease forwards;
-}
-
 /* TIMELINE */
 .timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  margin-top: 40px;
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.timeline h2 {
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .timeline-item {
   display: flex;
   gap: 20px;
-  align-items: flex-start;
+  margin-bottom: 30px;
 }
 
-.timeline-item .icon {
-  font-size: 28px;
+.timeline-item i {
+  font-size: 26px;
   color: #f5c542;
 }
 
-.timeline-item .content h3 {
-  margin: 0 0 6px;
+/* PROJECTS */
+.projects {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 0 20px;
 }
 
-/* PROJECT */
 .project-card {
   background: #141a2b;
   padding: 20px;
-  border-radius: 12px;
   margin-bottom: 20px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  border-radius: 12px;
 }
 
 /* ANIMATION */
-@keyframes fadeUp {
+@keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
-/* ICON TIMELINE */
 
-.icon-circle {
-  width: 52px;
-  height: 52px;
-  min-width: 52px;
-  border-radius: 50%;
-  background: rgba(245, 197, 66, 0.15);
-  border: 1px solid rgba(245, 197, 66, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 20px rgba(245, 197, 66, 0.25);
-}
+/* MOBILE */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.icon {
-  font-size: 22px;
-}
-
-/* TIMELINE ITEM HOVER */
-.timeline-item:hover .icon-circle {
-  box-shadow: 0 0 30px rgba(245, 197, 66, 0.5);
-  transform: scale(1.05);
-}
-
-.timeline-item {
-  transition: all 0.3s ease;
+  nav {
+    margin-top: 10px;
+  }
 }
