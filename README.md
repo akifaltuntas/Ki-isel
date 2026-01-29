@@ -1,2 +1,0 @@
-#kişisel
-m.akişisel
