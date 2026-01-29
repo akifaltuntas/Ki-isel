@@ -114,8 +114,10 @@ body {
 
 .timeline-items {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 80px; /* ikonlar arası mesafe */
   text-align: center;
+  flex-wrap: wrap;
 }
 
 /* === İKONLAR BURADA GARANTİ === */
