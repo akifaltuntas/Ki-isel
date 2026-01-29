@@ -179,3 +179,122 @@ a {
     left: 20px;
   }
 }
+/* ================= NAVBAR ================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+  background: transparent;
+}
+
+.logo {
+  color: #f5c542;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.nav-links a {
+  margin-left: 28px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #94a3b8;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #38bdf8;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ================= BENİM HİKAYEM ================= */
+
+.story {
+  margin-top: -40px;
+  padding: 80px 8%;
+}
+
+.story h2 {
+  color: #f5c542;
+  margin-bottom: 40px;
+}
+
+/* KART GÖRÜNÜM */
+.timeline {
+  background: rgba(255,255,255,0.03);
+  border-radius: 16px;
+  padding: 40px 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.timeline-item {
+  text-align: center;
+  flex: 1;
+}
+
+/* ORTA ÇİZGİYİ TAMAMEN KALDIR */
+.timeline::before {
+  display: none;
+}
+
+/* İKONLAR */
+.timeline-item .icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  background: #141a2b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  color: #f5c542;
+  box-shadow: 0 0 18px rgba(245,197,66,0.4);
+}
+
+/* 14 YAŞ ÖZEL İKON */
+.hafiz-icon {
+  background: radial-gradient(circle, #f5c542, #141a2b);
+  color: #0b0f1a;
+  box-shadow: 0 0 22px rgba(245,197,66,0.8);
+}
+
+.timeline-item h3 {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.timeline-item p {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* ================= MOBİL AYNI GÖRÜNÜM ================= */
+
+@media (max-width: 768px) {
+  .timeline {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .timeline-item {
+    text-align: center;
+  }
+}
