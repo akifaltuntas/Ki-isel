@@ -2,7 +2,8 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>Kişisel Web Sitem</title>
+  <title>Mehmet | Kişisel Web Sitesi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,29 +18,48 @@
     </nav>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
+  <!-- HERO (FOTOĞRAF ODAKLI ANA ALAN) -->
+  <main class="hero">
+
+    <!-- SOL METİN -->
     <div class="hero-left">
-      <h1>Merhaba, Ben Mehmet</h1>
-      <p>Öğrenerek ve üreterek ilerliyorum.</p>
 
-      <!-- HİKAYEMİ OKU -->
-      <a href="hikayem.html" class="hero-button">
-        Hikâyemi Oku
-      </a>
+      <h1 class="hero-title">
+        Merhaba,<br>
+        Ben <span>Mehmet</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Öğrenmeyi bir hedef değil,<br>
+        bir yaşam biçimi olarak görüyorum.
+      </p>
+
+      <div class="hero-cta">
+        <a href="hikayem.html" class="hero-link">
+          Hikâyemi Oku →
+        </a>
+      </div>
+
     </div>
 
+    <!-- SAĞ GÖRSEL / ATMOSFER -->
     <div class="hero-right">
-      <div class="glow-circle"></div>
+      <div class="glow-layer"></div>
+      <div class="glow-core"></div>
     </div>
-  </section>
 
-  <!-- PROJELER -->
+  </main>
+
+  <!-- PROJELER (ŞİMDİLİK AYRI, FOTOĞRAFI BOZMAMASI İÇİN) -->
   <section class="projects" id="projects">
     <div class="project-card">
       <h3>AI Prompt Studio</h3>
       <p>Yapay zeka için özenle hazırlanmış prompt koleksiyonum.</p>
-      <a href="https://mehmetakifaltuntas61-arch.github.io/ai-image-prompts/" class="project-btn">
+      <a
+        href="https://mehmetakifaltuntas61-arch.github.io/ai-image-prompts/"
+        class="project-btn"
+        target="_blank"
+      >
         Live Demo →
       </a>
     </div>
