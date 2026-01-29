@@ -11,7 +11,7 @@
   <header class="navbar">
     <div class="nav-logo">Mehmet</div>
     <nav class="nav-links">
-      <a href="#story">Hakkımda</a>
+      <a href="hikayem.html">Hakkımda</a>
       <a href="#projects">Projeler</a>
       <a href="#contact">İletişim</a>
     </nav>
@@ -23,32 +23,14 @@
       <h1>Merhaba, Ben Mehmet</h1>
       <p>Öğrenerek ve üreterek ilerliyorum.</p>
 
-      <!-- HİKAYEMİ OKU BUTONU -->
-      <button class="hero-button" id="storyBtn">
+      <!-- HİKAYEMİ OKU -->
+      <a href="hikayem.html" class="hero-button">
         Hikâyemi Oku
-      </button>
+      </a>
     </div>
 
     <div class="hero-right">
       <div class="glow-circle"></div>
-    </div>
-  </section>
-
-  <!-- HİKAYE (GİZLİ AÇILIR) -->
-  <section class="story" id="story">
-    <div class="story-content">
-      <p>
-        Ben disiplinle büyümüş ve vazgeçmemeyi erken yaşta öğrenmiş bir öğrenciyim.
-        Kendimi bir sonuçtan ziyade gelişmekte olan bir süreç olarak görüyorum.
-        Bu site, öğrenme ve üretme yolculuğumun dijital bir yansımasıdır.
-      </p>
-
-      <div class="timeline">
-        <div><span>10 Yaş</span> Hafızlığa başladım</div>
-        <div><span>14 Yaş</span> Hafızlık tamamlandı</div>
-        <div><span>9. Sınıf</span> İlk web denemem</div>
-        <div><span>10. Sınıf</span> AI Prompt Studio</div>
-      </div>
     </div>
   </section>
 
@@ -62,17 +44,6 @@
       </a>
     </div>
   </section>
-
-  <!-- JAVASCRIPT -->
-  <script>
-    const btn = document.getElementById("storyBtn");
-    const story = document.getElementById("story");
-
-    btn.addEventListener("click", () => {
-      story.classList.toggle("active");
-      story.scrollIntoView({ behavior: "smooth" });
-    });
-  </script>
 
 </body>
 </html>
