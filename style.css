@@ -1,4 +1,4 @@
-/* ===== GENEL ===== */
+/* ================== GENEL ================== */
 html, body {
   margin: 0;
   padding: 0;
@@ -9,7 +9,7 @@ html, body {
   overflow-x: hidden;
 }
 
-/* ===== NAVBAR ===== */
+/* ================== NAVBAR ================== */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -31,12 +31,27 @@ html, body {
   position: relative;
 }
 
-/* ===== HERO ===== */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #f5c542;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ================== HERO ================== */
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 110px 8% 90px;
+  padding: 120px 8% 60px;
 }
 
 .hero-left {
@@ -46,33 +61,35 @@ html, body {
 .hero-title {
   font-size: 48px;
   line-height: 1.2;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   background: linear-gradient(90deg, #f5c542, #38bdf8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .hero-title span {
-  color: #fff;
-  -webkit-text-fill-color: #fff;
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
 }
 
 .hero-subtitle {
-  font-size: 16px;
   color: #94a3b8;
-  margin-bottom: 26px;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 32px;
 }
 
+/* ================== BUTONLAR ================== */
 .hero-cta {
   display: flex;
-  gap: 14px;
+  gap: 16px;
 }
 
 .hero-button {
-  padding: 9px 20px;
-  font-size: 13.5px;
-  border-radius: 7px;
-  background: linear-gradient(135deg,#f5c542,#38bdf8);
+  padding: 10px 22px;
+  font-size: 14px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #f5c542, #38bdf8);
   color: #0b0f1a;
   text-decoration: none;
 }
@@ -80,103 +97,132 @@ html, body {
 .hero-button.secondary {
   background: transparent;
   color: #38bdf8;
-  border: 1px solid rgba(56,189,248,.6);
+  border: 1px solid rgba(56,189,248,0.6);
 }
 
-/* ===== GLOW ===== */
+/* ================== GLOW ================== */
 .hero-right {
-  width: 300px;
-  height: 300px;
+  width: 320px;
+  height: 320px;
 }
 
 .glow-circle {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: radial-gradient(circle,#38bdf8,transparent 70%);
+  background: radial-gradient(circle, #38bdf8, transparent 70%);
   filter: blur(40px);
+  opacity: 0.8;
 }
 
-/* ===== BENİM HİKAYEM ===== */
+/* ================== BENİM HİKAYEM ================== */
 .story {
-  padding: 120px 8% 140px;
+  padding: 80px 8% 120px;
+  background: #0b0f1a;
 }
 
 .story h2 {
-  font-size: 32px;
-  margin-left: 40px;
-  margin-bottom: 60px;
+  font-size: 28px;
+  margin-bottom: 50px;
+  margin-left: 6px; /* biraz sağ */
 }
 
-/* ===== TIMELINE ===== */
+/* ================== TIMELINE ================== */
 .timeline {
+  position: relative;
   display: flex;
   justify-content: space-between;
-  position: relative;
-  gap: 40px;
+  align-items: flex-start;
 }
 
+/* çizgi */
 .timeline::before {
   content: "";
   position: absolute;
-  top: 42px;
+  top: 44px;
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg,#f5c542,#38bdf8);
-  opacity: .35;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(245,197,66,0.8),
+    transparent
+  );
 }
 
+/* adım */
 .timeline-item {
   text-align: center;
   max-width: 220px;
 }
 
+/* ikon — FOTOĞRAFLA AYNI */
 .timeline-item .icon {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: #141a2b;
+  background: radial-gradient(
+    circle at top left,
+    #1b2336,
+    #0f1525 70%
+  );
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 26px;
   color: #f5c542;
   margin: 0 auto 14px;
+  box-shadow:
+    0 0 12px rgba(245,197,66,0.35),
+    inset 0 0 8px rgba(255,255,255,0.05);
 }
 
+/* yazılar */
 .timeline-item h3 {
-  font-size: 18px;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 4px;
 }
 
 .timeline-item p {
-  font-size: 14px;
-  color: #94a3b8;
+  font-size: 13.5px;
+  color: #aab2c5;
 }
 
-/* ===== MOBİL – FOTOĞRAF GİBİ ===== */
+/* ================== MOBİL ================== */
 @media (max-width: 768px) {
 
-  /* SADECE ÖLÇEK KÜÇÜLÜR */
   .hero {
-    padding: 80px 6% 60px;
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 20px 40px;
   }
 
-  .hero-title {
-    font-size: 36px;
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
   }
 
-  .hero-subtitle {
-    font-size: 15px;
+  .hero-button {
+    width: 100%;
+    text-align: center;
   }
 
-  .hero-right {
-    width: 220px;
-    height: 220px;
+  .story {
+    padding: 60px 20px 100px;
   }
 
   .timeline {
-    transform: scale(0.92);
-    transform-origin: top center;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .timeline::before {
+    display: none;
+  }
+
+  .timeline-item {
+    max-width: 100%;
   }
 }
