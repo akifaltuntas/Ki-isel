@@ -143,3 +143,31 @@ body::before {
     transform: translateY(0);
   }
 }
+/* ICON TIMELINE */
+
+.icon-circle {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  border-radius: 50%;
+  background: rgba(245, 197, 66, 0.15);
+  border: 1px solid rgba(245, 197, 66, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(245, 197, 66, 0.25);
+}
+
+.icon {
+  font-size: 22px;
+}
+
+/* TIMELINE ITEM HOVER */
+.timeline-item:hover .icon-circle {
+  box-shadow: 0 0 30px rgba(245, 197, 66, 0.5);
+  transform: scale(1.05);
+}
+
+.timeline-item {
+  transition: all 0.3s ease;
+}
