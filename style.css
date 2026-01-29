@@ -1,19 +1,14 @@
-/* =====================
-   GLOBAL KİLİT
-===================== */
+/* GENEL */
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #0b0f1a;
+  background: #0b0f1a;
   color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
-  min-height: 100%;
   overflow-x: hidden;
 }
 
-/* =====================
-   NAVBAR
-===================== */
+/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -43,23 +38,20 @@ html, body {
   width: 0;
   height: 2px;
   background: #f5c542;
-  transition: 0.3s;
+  transition: width 0.3s ease;
 }
 
 .nav-links a:hover::after {
   width: 100%;
 }
 
-/* =====================
-   HERO
-===================== */
+/* HERO */
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 120px 8%;
+  padding: 120px 8% 60px;
   min-height: auto;
-  padding-bottom
 }
 
 .hero-left {
@@ -75,6 +67,11 @@ html, body {
   -webkit-text-fill-color: transparent;
 }
 
+.hero-title span {
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
+}
+
 .hero-subtitle {
   color: #94a3b8;
   font-size: 16px;
@@ -82,6 +79,7 @@ html, body {
   margin-bottom: 32px;
 }
 
+/* BUTONLAR */
 .hero-cta {
   display: flex;
   gap: 16px;
@@ -102,9 +100,7 @@ html, body {
   border: 1px solid rgba(56,189,248,0.6);
 }
 
-/* =====================
-   HERO GLOW
-===================== */
+/* GLOW */
 .hero-right {
   width: 320px;
   height: 320px;
@@ -119,48 +115,45 @@ html, body {
   opacity: 0.8;
 }
 
-/* =====================
-   BENİM HİKAYEM
-===================== */
+/* BENİM HİKAYEM */
 .story {
-  background-color: #0b0f1a;
-  padding: -500px 8% 120px;
+  padding-top: 80px;
+  padding-bottom: 120px;
+  padding-left: 8%;
+  padding-right: 8%;
 }
 
 .story h2 {
   font-size: 32px;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 
-/* =====================
-   TIMELINE
-===================== */
+/* TIMELINE */
 .timeline {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 40px;
+  padding-top: 20px;
 }
 
-/* çizgi */
 .timeline::before {
   content: "";
   position: absolute;
-  top: 42px;
+  top: 32px;
   left: 0;
   right: 0;
   height: 2px;
   background: linear-gradient(90deg, #f5c542, #38bdf8);
-  opacity: 0.4;
+  opacity: 0.35;
 }
 
-/* adım */
 .timeline-item {
-  width: 22%;
   text-align: center;
+  max-width: 220px;
 }
 
-/* ikon SABİT */
 .timeline-item .icon {
   width: 64px;
   height: 64px;
@@ -172,51 +165,38 @@ html, body {
   justify-content: center;
   font-size: 26px;
   color: #f5c542;
-  z-index: 2;
   position: relative;
+  z-index: 2;
 }
 
 .timeline-item h3 {
+  margin: 0 0 6px;
   font-size: 18px;
-  margin-bottom: 6px;
 }
 
 .timeline-item p {
+  margin: 0;
   font-size: 14px;
   color: #94a3b8;
+  line-height: 1.5;
 }
 
-/* =====================
-   MOBİL
-===================== */
+/* MOBİL */
 @media (max-width: 768px) {
-
-  .navbar {
-    padding: 16px 20px;
-  }
-
   .hero {
     flex-direction: column;
     text-align: center;
-    padding: 80px 20px;
+    padding: 60px 20px;
   }
 
   .hero-cta {
     flex-direction: column;
+    width: 100%;
   }
 
   .hero-button {
     width: 100%;
     text-align: center;
-  }
-
-  .hero-right {
-    margin-top: 40px;
-  }
-
-  /* BENİM HİKAYEM MOBİL */
-  .story {
-    padding: 100px 20px;
   }
 
   .timeline {
@@ -229,11 +209,11 @@ html, body {
   }
 
   .timeline-item {
-    width: 100%;
+    max-width: 100%;
     text-align: left;
     display: flex;
-    gap: 16px;
     align-items: center;
+    gap: 16px;
   }
 
   .timeline-item .icon {
