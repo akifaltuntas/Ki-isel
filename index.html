@@ -1,182 +1,93 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<title>Akif | Kişisel Site</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-/* ===== GENEL ===== */
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #0b0f1a;
-  color: #fff;
-}
-
-/* ===== HERO ===== */
-.hero {
-  padding: 120px 8% 80px;
-}
-
-.hero h1 {
-  font-size: 46px;
-  line-height: 1.2;
-}
-
-.hero span {
-  background: linear-gradient(90deg,#f5c542,#38bdf8);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.hero p {
-  color: #94a3b8;
-}
-
-.hero-cta {
-  margin-top: 25px;
-  display: flex;
-  gap: 14px;
-}
-
-.hero-cta a {
-  padding: 10px 22px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.hero-cta a:first-child {
-  background: linear-gradient(135deg,#f5c542,#38bdf8);
-  color: #0b0f1a;
-}
-
-.hero-cta a:last-child {
-  border: 1px solid #38bdf8;
-  color: #38bdf8;
-}
-
-/* ===== STORY CARD ===== */
-.story {
-  padding: 60px 8%;
-}
-
-.story-card {
-  background: #0f1629;
-  border-radius: 20px;
-  padding: 50px 30px;
-  box-shadow: 0 0 40px rgba(56,189,248,0.08);
-}
-
-.story-card h2 {
-  margin-bottom: 40px;
-  font-size: 26px;
-}
-
-/* ===== TIMELINE ===== */
-.timeline {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-/* ===== ITEM ===== */
-.timeline-item {
-  text-align: center;
-  width: 22%;
-  min-width: 140px;
-}
-
-/* ===== ICON ===== */
-.icon {
-  width: 64px;
-  height: 64px;
-  margin: 0 auto;
-  border-radius: 50%;
-  background: radial-gradient(circle,#38bdf8,#141a2b);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 18px rgba(56,189,248,.6);
-}
-
-.icon::after {
-  content: attr(data-icon);
-  font-size: 26px;
-}
-
-/* ===== TEXT (2 SATIR YUKARI ALINDI) ===== */
-.timeline-item h3 {
-  margin-top: 6px;
-  font-size: 16px;
-  transform: translateY(-12px);
-}
-
-.timeline-item p {
-  font-size: 13px;
-  color: #94a3b8;
-  transform: translateY(-12px);
-}
-
-/* ===== MOBİL ===== */
-@media (max-width: 768px) {
-  .timeline {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .timeline-item {
-    width: 100%;
-  }
-}
-</style>
+  <meta charset="UTF-8">
+  <title>Akif | Kişisel Web Sitesi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<section class="hero">
-  <h1>Merhaba,<br>Ben <span>Akif</span></h1>
-  <p>Öğrenerek ve üreterek ilerliyorum.</p>
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar">
+    <div class="logo">Akif</div>
 
-  <div class="hero-cta">
-    <a href="#story">Hikayemi Oku</a>
-    <a href="#">Projelerim</a>
-  </div>
-</section>
+    <nav class="nav-links">
+      <a href="#about">Hakkımda</a>
+      <a href="#projects">Projeler</a>
+      <a href="#contact">İletişim</a>
+    </nav>
+  </header>
 
-<section class="story" id="story">
-  <div class="story-card">
+  <!-- ================= HERO ================= -->
+  <main class="hero">
+
+    <div class="hero-left">
+      <h1 class="hero-title">
+        Merhaba,<br>
+        Ben <span>Akif</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Öğrenerek ve üreterek ilerliyorum.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#about" class="hero-button">Hikâyemi Oku</a>
+        <a href="#projects" class="hero-button secondary">Projelerim</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="glow-circle"></div>
+    </div>
+
+  </main>
+
+  <!-- ================= BENİM HİKAYEM ================= -->
+  <section class="story" id="about">
     <h2>Benim Hikayem</h2>
 
     <div class="timeline">
+
       <div class="timeline-item">
-        <div class="icon" data-icon="💡"></div>
+        <div class="icon">💡</div>
         <h3>10 Yaş</h3>
         <p>Hafızlığa Başladım</p>
       </div>
 
       <div class="timeline-item">
-        <div class="icon" data-icon="📖"></div>
+        <div class="icon hafiz-icon">🕌</div>
         <h3>14 Yaş</h3>
         <p>Hafız Oldum</p>
       </div>
 
       <div class="timeline-item">
-        <div class="icon" data-icon="💻"></div>
+        <div class="icon">💻</div>
         <h3>9. Sınıf</h3>
         <p>İlk Web Denemem</p>
       </div>
 
       <div class="timeline-item">
-        <div class="icon" data-icon="🚀"></div>
+        <div class="icon">🚀</div>
         <h3>10. Sınıf</h3>
         <p>Kendi Projelerimi Geliştirmeye Başladım</p>
       </div>
+
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- ================= PROJELER ================= -->
+  <section id="projects" class="story">
+    <h2>Projelerim</h2>
+    <p style="color:#94a3b8;">Yakında eklenecek…</p>
+  </section>
+
+  <!-- ================= İLETİŞİM ================= -->
+  <section id="contact" class="story">
+    <h2>İletişim</h2>
+    <p style="color:#94a3b8;">Bana ulaşmak için yakında form eklenecek.</p>
+  </section>
 
 </body>
 </html>
