@@ -1,4 +1,4 @@
-/* GENEL */
+#/* GENEL */
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -204,7 +204,7 @@ body {
   .timeline {
     flex-direction: column;
     gap: 50px;
-    margin-top: 0;
+    margin-top: -180px;
   }
 
   .timeline::before {
