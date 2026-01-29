@@ -1,116 +1,194 @@
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* =====================
+   RESET
+===================== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-body {
-  background: radial-gradient(circle at top, #0b0f1a, #05070d);
+/* =====================
+   RENK DEĞİŞKENLERİ
+===================== */
+:root{
+  --bg-main:#070b16;
+  --bg-soft:#0b1020;
+  --gold:#f5c542;
+  --gold-soft:#ffcc4d;
+  --blue:#38bdf8;
+  --text-main:#ffffff;
+  --text-soft:#94a3b8;
+}
+
+/* =====================
+   BODY
+===================== */
+body{
+  background: radial-gradient(circle at top, #0b1020 0%, #05070d 65%);
   font-family: Arial, sans-serif;
-  color: #fff;
+  color: var(--text-main);
 }
 
-/* NAVBAR */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 60px;
+/* =====================
+   NAVBAR
+===================== */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:22px 60px;
 }
 
-.logo {
-  font-size: 22px;
-  font-weight: bold;
+.logo{
+  font-size:22px;
+  font-weight:700;
+  color:var(--gold);
 }
 
-.navbar a {
-  color: #cbd5e1;
-  margin-left: 20px;
-  text-decoration: none;
+.navbar a{
+  margin-left:28px;
+  text-decoration:none;
+  color:var(--text-soft);
+  font-weight:500;
+  transition:.3s;
 }
 
-.navbar a:hover {
-  color: #f5c542;
+.navbar a:hover{
+  color:var(--gold);
 }
 
-/* HERO */
-.hero {
-  padding: 90px 60px 60px;
+/* =====================
+   HERO
+===================== */
+.hero{
+  min-height:85vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
-.hero-text h1 {
-  font-size: 46px;
+.hero-text{
+  text-align:left;
+  max-width:520px;
 }
 
-.hero-text span {
-  color: #f5c542;
+.hero-text h1{
+  font-size:46px;
+  margin-bottom:14px;
 }
 
-.hero-text p {
-  margin: 14px 0 30px;
-  color: #94a3b8;
+.hero-text h1 span{
+  color:var(--gold);
 }
 
-.hero-buttons {
-  display: flex;
-  gap: 15px;
+.hero-text p{
+  font-size:17px;
+  color:var(--text-soft);
+  margin-bottom:34px;
 }
 
-.btn {
-  padding: 12px 22px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
+/* =====================
+   BUTONLAR
+===================== */
+.hero-buttons{
+  display:flex;
+  gap:16px;
 }
 
-.btn.primary {
-  background: linear-gradient(135deg, #f5c542, #ffb703);
-  color: #000;
+.btn{
+  padding:13px 28px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:15px;
+  transition:.3s;
 }
 
-.btn.secondary {
-  border: 1px solid #38bdf8;
-  color: #38bdf8;
+/* SARI */
+.btn.primary{
+  background:linear-gradient(135deg,var(--gold),var(--gold-soft));
+  color:#000;
+  box-shadow:0 0 22px rgba(245,197,66,.45);
 }
 
-.btn:hover {
-  box-shadow: 0 0 18px rgba(245,197,66,0.6);
+.btn.primary:hover{
+  transform:translateY(-2px);
+  box-shadow:0 0 35px rgba(245,197,66,.7);
 }
 
-/* TIMELINE */
-.timeline {
-  padding: 60px;
+/* MAVİ */
+.btn.secondary{
+  background:transparent;
+  border:1.6px solid var(--blue);
+  color:var(--blue);
 }
 
-.timeline h2 {
-  margin-bottom: 40px;
-  font-size: 26px;
+.btn.secondary:hover{
+  background:rgba(56,189,248,.08);
+  box-shadow:0 0 20px rgba(56,189,248,.45);
 }
 
-.timeline-items {
-  display: flex;
-  gap: 70px;
-  flex-wrap: wrap;
+/* =====================
+   TIMELINE
+===================== */
+.timeline{
+  max-width:900px;
+  margin:120px auto;
+  text-align:center;
 }
 
-.timeline-item {
-  text-align: center;
+.timeline h2{
+  font-size:32px;
+  margin-bottom:60px;
 }
 
-.timeline-item i {
-  font-size: 32px;
-  color: #f5c542;
-  margin-bottom: 12px;
+.timeline-items{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:32px;
 }
 
-.timeline-item h3 {
-  font-size: 18px;
-  margin-bottom: 6px;
+.timeline-item{
+  background:rgba(255,255,255,.02);
+  border:1px solid rgba(255,255,255,.05);
+  border-radius:14px;
+  padding:28px 20px;
 }
 
-.timeline-item p {
-  font-size: 14px;
-  color: #94a3b8;
+.timeline-item i{
+  font-size:26px;
+  color:var(--gold);
+  margin-bottom:14px;
+}
+
+.timeline-item h3{
+  font-size:18px;
+  margin-bottom:8px;
+}
+
+.timeline-item p{
+  font-size:14px;
+  color:var(--text-soft);
+}
+
+/* =====================
+   MOBİL
+===================== */
+@media(max-width:768px){
+  .navbar{
+    padding:20px 26px;
+  }
+
+  .hero-text h1{
+    font-size:36px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+    width:100%;
+  }
+
+  .btn{
+    text-align:center;
+  }
 }
