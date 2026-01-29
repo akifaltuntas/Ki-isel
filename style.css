@@ -1,13 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #0b0f1a;
+  background: radial-gradient(circle at 20% 20%, #1a1f35, #0b0f1a 60%);
   color: #e5e7eb;
+  overflow-x: hidden;
 }
 
+/* ARKA PLAN IŞIK EFEKTİ */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(245,197,66,0.08),
+    transparent 70%
+  );
+  animation: lightMove 12s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes lightMove {
+  from { transform: translateX(-40%); }
+  to   { transform: translateX(40%); }
+}
+
+/* NAVBAR */
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px 40px;
 }
 
@@ -22,15 +49,26 @@ body {
   color: #f5c542;
 }
 
+/* HERO */
 .hero {
   text-align: center;
   margin-top: 120px;
+  animation: fadeUp 1.2s ease forwards;
+}
+
+.hero h1 {
+  font-size: 48px;
 }
 
 .hero h1 span {
   color: #f5c542;
 }
 
+.hero p {
+  color: #94a3b8;
+}
+
+/* BUTTONS */
 .buttons {
   margin-top: 30px;
 }
@@ -40,6 +78,8 @@ body {
   border-radius: 8px;
   text-decoration: none;
   margin: 10px;
+  display: inline-block;
+  transition: all 0.3s ease;
 }
 
 .primary {
@@ -52,13 +92,66 @@ body {
   color: #f5c542;
 }
 
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(245,197,66,0.25);
+}
+
+/* SAYFALAR */
 .page {
   padding: 60px;
 }
 
+.fade {
+  animation: fadeUp 1s ease forwards;
+}
+
+/* TIMELINE */
+.timeline {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline li {
+  margin-bottom: 15px;
+  padding-left: 10px;
+  border-left: 3px solid #f5c542;
+}
+
+/* PROJECT CARDS */
 .project-card {
   background: #141a2b;
   padding: 20px;
   border-radius: 12px;
   margin-bottom: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* CONTACT */
+.contact {
+  text-align: center;
+  padding: 60px;
+}
+
+.icons a {
+  margin: 0 10px;
+  color: #f5c542;
+  text-decoration: none;
+}
+
+/* ANİMASYON */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
