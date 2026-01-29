@@ -182,3 +182,32 @@ body {
     width: 100%;
   }
 }
+/* HİKAYEM SAYFASI */
+.story-page {
+  min-height: 100vh;
+  padding: 120px 8% 80px;
+  background: #0b0f1a;
+}
+
+.story-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.story-container h1 {
+  font-size: 42px;
+  margin-bottom: 40px;
+}
+
+.story-text {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #cbd5e1;
+}
+
+.story-note {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #94a3b8;
+  font-style: italic;
+}
