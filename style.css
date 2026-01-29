@@ -282,3 +282,78 @@ h1 {
   color: #f5c542;
   font-weight: bold;
 }
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    padding: 16px 20px;
+  }
+
+  .nav-links {
+    gap: 16px;
+    font-size: 14px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .hero-left {
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-right {
+    margin-top: 40px;
+  }
+
+  .glow-circle {
+    width: 220px;
+    height: 220px;
+  }
+
+  .timeline {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .timeline div {
+    width: 100%;
+    text-align: center;
+  }
+
+  .projects {
+    padding: 60px 20px;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .contact {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  input, textarea {
+    width: 100%;
+  }
+}
