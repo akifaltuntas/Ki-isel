@@ -58,7 +58,8 @@ html, body {
   justify-content: space-between;
   align-items: center;
   padding: 120px 8%;
-  min-height: 100vh;
+  min-height: auto;
+  padding-bottom
 }
 
 .hero-left {
