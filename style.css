@@ -1,67 +1,47 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-  <meta charset="UTF-8">
-  <title>Akif | Kişisel Web Sitesi</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+/* GENEL */
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #0b0f1a, #05070d);
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #d1d5db;
+}
 
-  <!-- FONT AWESOME -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
+/* ANA ALAN */
+.story-container {
+  max-width: 780px;
+  margin: 100px auto;
+  padding: 0 24px;
+}
 
-<header class="navbar">
-  <div class="logo">Akif</div>
-  <nav>
-    <a href="hikayem.html">Hakkımda</a>
-    <a href="projects.html">Projeler</a>
-  </nav>
-</header>
+/* BAŞLIK */
+.story-container h1 {
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #e5e7eb;
+  letter-spacing: -0.5px;
+}
 
-<section class="hero">
-  <div class="hero-text">
-    <h1>Merhaba, Ben <span>Akif</span></h1>
-    <p>Öğrenerek ve üreterek ilerliyorum.</p>
+/* PARAGRAFLAR */
+.story-container p {
+  font-size: 17px;
+  line-height: 1.9;
+  margin-bottom: 26px;
+  color: #cbd5e1;
+}
 
-    <div class="hero-buttons">
-      <a href="hikayem.html" class="btn primary">Hikayemi Oku</a>
-      <a href="projects.html" class="btn secondary">Projelerim</a>
-    </div>
-  </div>
-</section>
-
-<section class="timeline">
-  <h2>Benim Hikayem</h2>
-
-  <div class="timeline-items">
-    <div class="timeline-item">
-      <i class="fa-solid fa-book-quran"></i>
-      <h3>10 Yaş</h3>
-      <p>Hafızlığa Başladım</p>
-    </div>
-
-    <div class="timeline-item">
-      <i class="fa-solid fa-award"></i>
-      <h3>14 Yaş</h3>
-      <p>Hafızlığım Bitti</p>
-    </div>
-
-    <div class="timeline-item">
-      <i class="fa-solid fa-code"></i>
-      <h3>9. Sınıf</h3>
-      <p>İlk Web Denemem</p>
-    </div>
-
-    <div class="timeline-item">
-      <i class="fa-solid fa-laptop-code"></i>
-      <h3>10. Sınıf</h3>
-      <p>İlk Web Sitem</p>
-    </div>
-  </div>
-</section>
-
-</body>
-</html>
+/* SON PARAGRAF */
+.story-container .closing {
+  margin-top: 40px;
+  font-size: 16px;
+  color: #94a3b8;
+  border-left: 3px solid #38bdf8;
+  padding-left: 16px;
+}
