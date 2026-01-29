@@ -338,7 +338,7 @@ body {
 }
 /* Timeline yazılarını biraz yukarı al */
 .timeline-item {
-  margin-top: -40px;   /* Yukarı taşır */
+  margin-top: -60px;   /* Yukarı taşır */
 }
 
 /* Yazının kendi iç boşluğunu da ayarla */
