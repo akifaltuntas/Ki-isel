@@ -75,3 +75,19 @@ h1 {
     transform: translateX(-100%);
   }
 }
+.hero-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 26px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #f5c542, #38bdf8);
+  color: #0b0f1a;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.hero-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
