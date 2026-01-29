@@ -230,6 +230,103 @@ body {
     flex-direction: column;
     gap: 30px;
   }
+  /* BENİM HİKAYEM */
+.story {
+  padding: 100px 8%;
+  background: #0b0f1a;
+  color: #fff;
+}
+
+.story h2 {
+  font-size: 32px;
+  margin-bottom: 60px;
+  text-align: left;
+}
+
+/* TIMELINE ANA ALAN */
+.timeline {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+/* ORTA ÇİZGİ */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 38px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #f5c542,
+    transparent
+  );
+}
+
+/* TEK ADIM */
+.timeline-item {
+  position: relative;
+  text-align: center;
+  max-width: 220px;
+}
+
+/* İKON */
+.timeline-item .icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: #141a2b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  color: #f5c542;
+  box-shadow: 0 0 20px rgba(245,197,66,0.25);
+  z-index: 2;
+  position: relative;
+}
+
+/* BAŞLIK */
+.timeline-item h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+/* AÇIKLAMA */
+.timeline-item p {
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+/* MOBİL */
+@media (max-width: 900px) {
+  .timeline {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .timeline::before {
+    display: none;
+  }
+
+  .timeline-item {
+    max-width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .timeline-item .icon {
+    margin: 0;
+  }
+}
 
   .timeline::before {
     display: none;
