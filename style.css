@@ -140,3 +140,48 @@ body {
   font-size: 14px;
   color: #94a3b8;
 }
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at top, #0b0f1a, #05070d);
+  font-family: 'Inter', sans-serif;
+  color: #d1d5db;
+}
+
+/* ANA ALAN */
+.story-container {
+  max-width: 780px;
+  margin: 100px auto;
+  padding: 0 24px;
+}
+
+/* BAŞLIK */
+.story-container h1 {
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #e5e7eb;
+  letter-spacing: -0.5px;
+}
+
+/* PARAGRAFLAR */
+.story-container p {
+  font-size: 17px;
+  line-height: 1.9;
+  margin-bottom: 26px;
+  color: #cbd5e1;
+}
+
+/* SON PARAGRAF */
+.story-container .closing {
+  margin-top: 40px;
+  font-size: 16px;
+  color: #94a3b8;
+  border-left: 3px solid #38bdf8;
+  padding-left: 16px;
+}
