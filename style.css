@@ -211,3 +211,17 @@ body {
   color: #94a3b8;
   font-style: italic;
 }
+/* PARTİKÜL ARKA PLAN */
+#particles {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Hikaye içeriği üstte kalsın */
+.story-page,
+.story-container {
+  position: relative;
+  z-index: 2;
+}
