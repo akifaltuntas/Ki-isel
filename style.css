@@ -10,7 +10,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ARKA PLAN IŞIK EFEKTİ */
+/* ARKA PLAN IŞIK */
 body::before {
   content: "";
   position: fixed;
@@ -34,19 +34,17 @@ body::before {
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 20px 40px;
 }
 
 .navbar a {
   color: #e5e7eb;
   text-decoration: none;
-  margin-left: 20px;
 }
 
 .logo {
-  font-weight: bold;
   color: #f5c542;
+  font-weight: bold;
 }
 
 /* HERO */
@@ -56,29 +54,20 @@ body::before {
   animation: fadeUp 1.2s ease forwards;
 }
 
-.hero h1 {
-  font-size: 48px;
-}
-
 .hero h1 span {
   color: #f5c542;
 }
 
-.hero p {
-  color: #94a3b8;
-}
-
-/* BUTTONS */
 .buttons {
   margin-top: 30px;
 }
 
+/* BUTTONS */
 .btn {
   padding: 12px 24px;
   border-radius: 8px;
   text-decoration: none;
   margin: 10px;
-  display: inline-block;
   transition: all 0.3s ease;
 }
 
@@ -97,7 +86,7 @@ body::before {
   box-shadow: 0 10px 30px rgba(245,197,66,0.25);
 }
 
-/* SAYFALAR */
+/* PAGE */
 .page {
   padding: 60px;
 }
@@ -108,17 +97,28 @@ body::before {
 
 /* TIMELINE */
 .timeline {
-  list-style: none;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 40px;
 }
 
-.timeline li {
-  margin-bottom: 15px;
-  padding-left: 10px;
-  border-left: 3px solid #f5c542;
+.timeline-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
 }
 
-/* PROJECT CARDS */
+.timeline-item .icon {
+  font-size: 28px;
+  color: #f5c542;
+}
+
+.timeline-item .content h3 {
+  margin: 0 0 6px;
+}
+
+/* PROJECT */
 .project-card {
   background: #141a2b;
   padding: 20px;
@@ -132,19 +132,7 @@ body::before {
   box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
-/* CONTACT */
-.contact {
-  text-align: center;
-  padding: 60px;
-}
-
-.icons a {
-  margin: 0 10px;
-  color: #f5c542;
-  text-decoration: none;
-}
-
-/* ANİMASYON */
+/* ANIMATION */
 @keyframes fadeUp {
   from {
     opacity: 0;
