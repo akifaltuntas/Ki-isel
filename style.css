@@ -336,3 +336,12 @@ body {
     width: 100%;
   }
 }
+/* Timeline yazılarını biraz yukarı al */
+.timeline-item {
+  margin-top: -20px;   /* Yukarı taşır */
+}
+
+/* Yazının kendi iç boşluğunu da ayarla */
+.timeline-item p {
+  margin-top: 6px;
+}
