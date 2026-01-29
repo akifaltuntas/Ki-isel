@@ -106,6 +106,8 @@ body {
 /* TIMELINE */
 .timeline {
   padding: 60px;
+  max-width: 1100px;
+  margin-left: 80px; /* sola kaydırma */
 }
 
 .timeline h2 {
@@ -114,11 +116,12 @@ body {
 
 .timeline-items {
   display: flex;
-  justify-content: center;
-  gap: 80px; /* ikonlar arası mesafe */
+  justify-content: flex-start;
+  gap: 70px;
   text-align: center;
   flex-wrap: wrap;
 }
+
 
 /* === İKONLAR BURADA GARANTİ === */
 .timeline-item i {
