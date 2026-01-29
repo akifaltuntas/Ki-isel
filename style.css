@@ -27,6 +27,7 @@ nav a {
   color: #cbd5f5;
   margin-left: 20px;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
@@ -48,21 +49,42 @@ nav a:hover {
   margin-top: 30px;
 }
 
+/* BUTONLAR + GLOW */
 .btn {
-  padding: 12px 24px;
+  padding: 12px 26px;
   margin: 10px;
   border-radius: 8px;
   text-decoration: none;
+  display: inline-block;
+  font-weight: 500;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
 }
 
+/* PRIMARY */
 .primary {
   background: #f5c542;
   color: #000;
 }
 
+.primary:hover {
+  box-shadow: 0 0 18px rgba(245, 197, 66, 0.6);
+  transform: translateY(-3px);
+}
+
+/* SECONDARY */
 .secondary {
   border: 1px solid #f5c542;
   color: #f5c542;
+  background: transparent;
+}
+
+.secondary:hover {
+  box-shadow: 0 0 18px rgba(245, 197, 66, 0.4);
+  transform: translateY(-3px);
 }
 
 /* JOURNEY – ANA SAYFA YATAY */
@@ -91,7 +113,8 @@ nav a:hover {
 .journey-item span {
   font-size: 14px;
   text-align: center;
-  max-width: 120px;
+  max-width: 140px;
+  line-height: 1.4;
 }
 
 .journey-item:hover {
@@ -140,5 +163,9 @@ nav a:hover {
 
   nav {
     margin-top: 10px;
+  }
+
+  .journey {
+    gap: 30px;
   }
 }
