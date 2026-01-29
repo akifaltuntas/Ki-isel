@@ -330,3 +330,26 @@ body {
   color: #0b0f1a;
   transform: translateY(-2px);
 }
+@media (max-width: 768px) {
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-link {
+    text-align: center;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .hero-button {
+    width: 100%;
+    text-align: center;
+  }
+}
