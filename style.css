@@ -1,47 +1,116 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
-/* GENEL */
 body {
-  min-height: 100vh;
   background: radial-gradient(circle at top, #0b0f1a, #05070d);
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  color: #d1d5db;
-}
-
-/* ANA ALAN */
-.story-container {
-  max-width: 780px;
-  margin: 100px auto;
-  padding: 0 24px;
-}
-
-/* BAŞLIK */
-.story-container h1 {
-  font-size: 38px;
-  font-weight: 600;
-  margin-bottom: 40px;
   color: #e5e7eb;
-  letter-spacing: -0.5px;
 }
 
-/* PARAGRAFLAR */
-.story-container p {
-  font-size: 17px;
-  line-height: 1.9;
-  margin-bottom: 26px;
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 8%;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.navbar nav a {
+  margin-left: 25px;
+  text-decoration: none;
   color: #cbd5e1;
 }
 
-/* SON PARAGRAF */
-.story-container .closing {
-  margin-top: 40px;
-  font-size: 16px;
+.navbar nav a:hover {
+  color: #38bdf8;
+}
+
+/* HERO */
+.hero {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+}
+
+.hero-text h1 {
+  font-size: 56px;
+  font-weight: 800;
+}
+
+.hero-text span {
+  color: #facc15;
+}
+
+.hero-text p {
+  margin: 15px 0 30px;
   color: #94a3b8;
-  border-left: 3px solid #38bdf8;
-  padding-left: 16px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 12px 26px;
+  background: #38bdf8;
+  color: #020617;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 2px solid #38bdf8;
+  color: #38bdf8;
+}
+
+.btn.outline:hover {
+  background: #38bdf8;
+  color: #020617;
+}
+
+/* TIMELINE */
+.timeline {
+  padding: 100px 8%;
+}
+
+.timeline h2 {
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+.timeline-items {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.timeline-item {
+  text-align: center;
+}
+
+.timeline-item i {
+  font-size: 28px;
+  color: #facc15;
+  margin-bottom: 10px;
+}
+
+.timeline-item h3 {
+  font-size: 18px;
+}
+
+.timeline-item p {
+  font-size: 14px;
+  color: #94a3b8;
 }
