@@ -225,3 +225,40 @@ body {
   position: relative;
   z-index: 2;
 }
+/* FOTOĞRAFA BİREBİR HİKAYEMİ OKU BUTONU */
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px 26px;
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, #f5c542, #f7b733);
+  color: #0b0f1a;
+
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+
+  box-shadow: 0 8px 25px rgba(245, 197, 66, 0.35);
+  transition: all 0.25s ease;
+}
+
+/* OK İKONU */
+.hero-button::after {
+  content: "›";
+  font-size: 20px;
+  margin-top: -1px;
+  transition: transform 0.25s ease;
+}
+
+/* HOVER */
+.hero-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(245, 197, 66, 0.55);
+}
+
+.hero-button:hover::after {
+  transform: translateX(4px);
+}
