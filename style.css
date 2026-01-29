@@ -1,17 +1,17 @@
-#/* GENEL */
-body {
-  html, body {
+/* ===== GENEL ===== */
+html, body {
   background: #0b0f1a;
   min-height: 100%;
-}
   margin: 0;
+}
+
+body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #0b0f1a;
   color: #ffffff;
   overflow-x: hidden;
 }
 
-/* NAVBAR */
+/* ===== NAVBAR ===== */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -48,7 +48,7 @@ body {
   width: 100%;
 }
 
-/* HERO */
+/* ===== HERO ===== */
 .hero {
   display: flex;
   justify-content: space-between;
@@ -82,7 +82,7 @@ body {
   margin-bottom: 32px;
 }
 
-/* BUTONLAR */
+/* ===== BUTONLAR ===== */
 .hero-cta {
   display: flex;
   gap: 16px;
@@ -96,6 +96,12 @@ body {
   background: linear-gradient(135deg, #f5c542, #38bdf8);
   color: #0b0f1a;
   text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.hero-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
 }
 
 .hero-button.secondary {
@@ -104,7 +110,11 @@ body {
   border: 1px solid rgba(56, 189, 248, 0.6);
 }
 
-/* SAĞ GLOW */
+.hero-button.secondary:hover {
+  background: rgba(56, 189, 248, 0.1);
+}
+
+/* ===== SAĞ GLOW ===== */
 .hero-right {
   width: 320px;
   height: 320px;
@@ -120,10 +130,10 @@ body {
   opacity: 0.8;
 }
 
-/* ===== BENİM HİKAYEM / TIMELINE ===== */
-
+/* ===== BENİM HİKAYEM ===== */
 .story {
   padding: 100px 8%;
+  margin-top: 80px; /* ← HERO’dan yaklaşık 5 satır aşağı */
 }
 
 .story h2 {
@@ -131,17 +141,15 @@ body {
   margin-bottom: 60px;
 }
 
-/* TIMELINE ALANI */
+/* ===== TIMELINE ===== */
 .timeline {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 40px;
-  margin-top: -60px; /* ← YUKARI ALAN ASIL KISIM */
 }
 
-/* ORTA ÇİZGİ */
 .timeline::before {
   content: "";
   position: absolute;
@@ -153,13 +161,12 @@ body {
   opacity: 0.4;
 }
 
-/* TEK ADIM */
 .timeline-item {
   text-align: center;
   max-width: 220px;
 }
 
-/* İKON – TAM KİLİTLİ */
+/* İKON – SABİT */
 .timeline-item .icon {
   width: 64px;
   height: 64px;
@@ -175,40 +182,60 @@ body {
   z-index: 2;
 }
 
-/* BAŞLIK */
 .timeline-item h3 {
   font-size: 18px;
   margin-bottom: 6px;
 }
 
-/* AÇIKLAMA */
 .timeline-item p {
   font-size: 14px;
   color: #94a3b8;
 }
 
-/* MOBİL */
+/* ===== MOBİL ===== */
 @media (max-width: 768px) {
+  .navbar {
+    padding: 16px 20px;
+  }
+
   .hero {
     flex-direction: column;
     text-align: center;
     padding: 60px 20px;
   }
 
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-subtitle {
+    font-size: 15px;
+  }
+
   .hero-cta {
     flex-direction: column;
     width: 100%;
+    gap: 12px;
   }
 
   .hero-button {
     width: 100%;
     text-align: center;
+    padding: 10px 18px;
+  }
+
+  .hero-right {
+    margin-top: 40px;
+  }
+
+  .glow-circle {
+    width: 220px;
+    height: 220px;
   }
 
   .timeline {
     flex-direction: column;
     gap: 50px;
-    margin-top: -10000px;
   }
 
   .timeline::before {
@@ -216,6 +243,6 @@ body {
   }
 
   .timeline-item {
-    max-width: 200%;
+    max-width: 100%;
   }
 }
