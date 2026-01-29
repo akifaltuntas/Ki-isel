@@ -338,10 +338,10 @@ body {
 }
 /* Timeline yazılarını biraz yukarı al */
 .timeline-item {
-  margin-top: -60px;   /* Yukarı taşır */
+  margin-top: -80px;   /* Yukarı taşır */
 }
 
 /* Yazının kendi iç boşluğunu da ayarla */
 .timeline-item p {
-  margin-top: 6px;
+  margin-top: 16px;
 }
