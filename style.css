@@ -204,7 +204,7 @@ body {
   .timeline {
     flex-direction: column;
     gap: 50px;
-    margin-top: -180px;
+    margin-top: -400px;
   }
 
   .timeline::before {
