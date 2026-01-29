@@ -262,3 +262,31 @@ body {
 .hero-button:hover::after {
   transform: translateX(4px);
 }
+/* BUTON GRUBU */
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+/* MAVİ ÇERÇEVELİ BUTON */
+.hero-button-outline {
+  padding: 14px 26px;
+  border-radius: 10px;
+
+  border: 2px solid #38bdf8;
+  color: #38bdf8;
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: all 0.25s ease;
+}
+
+/* HOVER */
+.hero-button-outline:hover {
+  background: #38bdf8;
+  color: #0b0f1a;
+  transform: translateY(-3px);
+}
